@@ -1,0 +1,327 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Lucida Sans', sans-serif;
+    margin: 0;
+    /* background-color:blueviolet; */
+}
+
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+p{font-size: 1.25em;}
+/* ul{list-style: none;} PARA SACAR EL ITEM*/ 
+li{font-size: 1.2em;}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color:rgba(245, 245, 245, 0.932);
+    background-color: rgb(46, 100, 237);
+}
+
+button:hover{
+    background-color: rgb(34, 52, 207);
+}
+
+.container{
+    max-width: 1350px;
+    margin: auto;
+}
+
+.color-mitad{
+    color: rgb(12, 51, 245);
+}
+
+header{
+    background-color: rgb(219, 219, 219);
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: rgb(12, 51, 245);
+    font-size: 1.7em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 0.95em;
+}
+
+header a:hover{
+    color: rgb(30, 47, 201);
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)
+    )
+    ,url("fotos/boca.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero h1 {
+    color: white;
+}
+
+#hero button{
+    font-size: 2em;
+}
+
+#proyectos .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#conocimientos{
+    background-color: rgb(22, 24, 35);
+    color:beige;
+    text-align: center;
+}
+
+#conocimientos .container{
+    
+    padding: 130px 10px;
+}
+
+#conocimientos h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#conocimientos p{
+    display: none;
+}
+
+#conocimientos .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 60px;
+    margin: 20px;
+    border-radius: 18px;
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.65)
+    )
+    ,url("fotos/html.jpg");
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.65)
+    )
+    ,url("fotos/css.jpg");
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.65)
+    )
+    ,url("fotos/Javascript.jpg");
+}
+
+#habilidades .container{
+    text-align: center;
+    padding: 200px 10px;
+
+}
+
+#habilidades li{
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+#contactame{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(22, 24, 35);
+    color:beige;
+    height: 90vh;
+}
+
+#contactame h2{
+    font-size: 10vw;
+}
+
+#contactame button{
+    font-size:4.8vw;
+    /* padding: 30px 55px; */
+}
+
+footer{
+    background-color: rgb(230,230,230);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100,100,100);
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media (min-width:720px){
+
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 25px;
+    }
+
+    #hero h1{
+        font-size: 5.5em;
+
+    }
+
+    #proyectos .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #proyectos .texto{
+        width: 50%;
+        max-width: 550px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #proyectos h2{
+        margin-top: 0;
+    }
+
+    #proyectos .img-container{
+        background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url("fotos/tevez.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 370px;
+    }
+
+    #conocimientos .programas{
+        display: flex;
+        justify-content: center;
+    }
+
+    #conocimientos p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #conocimientos h3{
+        margin-top: 0;
+    }
+
+    #conocimientos .carta{
+        padding: 35px;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+
+    #habilidades{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        ), url("fotos/riquelme.jpg");
+        background-repeat: no-repeat;
+        background-size: 450px 350px;
+        background-position: calc(100vw - 500px) 120px;
+
+    }
+
+    #habilidades .container{
+        text-align: initial;
+    }
+
+    #habilidades ul{
+        margin-left: 100px;
+    }
+
+    #contactame h2{
+        font-size: 5.7em;
+    }
+
+    #contactame button{
+        font-size: 2.7em;
+    }
+
+    footer .container{
+        justify-content: flex-end;
+    }
+}
+
+@media (min-width: 1200px) {
+    #habilidades{
+        background-position-x: calc(100vw - 800px);
+    }
+}
+
